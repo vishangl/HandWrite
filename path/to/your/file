@@ -1,0 +1,6 @@
+<div className="guid-section">
+    <h2>Guid Section</h2>
+    <a href="/assets/calligraphy-template.pdf" download>
+        <button>Download Calligraphy Template</button>
+    </a>
+</div> 
