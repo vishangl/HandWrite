@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-125454191-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-125454191-4');
+    </script>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Basic -->
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#09f" />
+    <meta
+      name="description"
+      content="Transform your digital text into beautiful handwritten-style text with just a few clicks! Perfect for assignments, notes, and creative writing."
+    />
+    <meta
+      name="keywords"
+      content="text to handwriting, text-to-handwriting, handwrite, convert text to image, write assignment online"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="author" content="Vishang Lad" />
+    <meta name="copyright" content="Vishang Lad" />
+    <meta name="robots" content="follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HandWrite - Text to Handwriting Converter" />
+    <meta
+      property="og:url"
+      content="https://www.vishanglad.com/text-to-handwriting"
+    />
+    <meta
+      property="og:description"
+      content="Transform your digital text into beautiful handwritten-style text with just a few clicks! Perfect for assignments, notes, and creative writing."
+    />
+    <meta property="og:site_name" content="HandWrite" />
+
+    <meta
+      property="og:image:secure_url"
+      itemprop="image"
+      content="https://www.vishanglad.com/images/handwrite-preview.png"
+    />
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="https://www.vishanglad.com/images/handwrite-preview.png"
+    />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="337" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@vishangl" />
+
+    <title>HandWrite</title>
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/svg"
+      sizes="32x32"
+      href="images/handwrite-logo.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <!-- PWA Migration -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <!-- Load Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto|Caveat|Liu+Jian+Mao+Cao&display=swap"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/features.css" />
+  </head>
+
+  <body>
+    <main>
+      <button
+        aria-label="Activate Dark Mode"
+        title="Toggle Dark Mode"
+        aria-pressed="false"
+        onclick="toggleTheme(this)"
+        class="dark-mode-toggle"
+      >
+        <span class="sun">
+          <img
+            alt="sun icon that represents light mode"
+            width="35px"
+            src="images/sun.svg"
+        /></span>
+        <span class="moon"
+          ><img
+            alt="moon icon to represent dark mode "
+            width="25px"
+            src="images/moon.svg"
+        /></span>
+      </button>
+      <div class="logo-container">
+        <img src="images/handwrite-logo.svg" alt="HandWrite Logo" class="main-logo" width="60" height="60">
+        <h1>HandWrite</h1>
+      </div>
+      <section class="generate-image-section">
+        <br /><br />
+        <form id="generate-image-form">
+          <!-- Generate Image Section -->
+          <div class="display-flex output-grid responsive-flex">
+            <div class="flex-1 page-container-super">
+              <div>
+                <h2 style="margin-top: 0px;">Input</h2>
+                <label class="block" for="note">Type/Paste text here</label>
+              </div>
+
+              <div class="flex-1 page-container">
+                <div class="page-a margined lines">
+                  <div contenteditable="true" class="top-margin"></div>
+                  <div class="display-flex left-margin-and-content">
+                    <div contenteditable="true" class="left-margin"></div>
+                    <div class="paper-content" id="note" contenteditable="true">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor
+                      in felis viverra efficitur. Integer id laoreet arcu.
+                      Mauris turpis nibh, scelerisque sed tristique non,
+                      hendrerit in erat. Duis interdum nisl risus, ac ultrices
+                      ipsum auctor at. Aliquam faucibus iaculis metus sit amet
+                      tincidunt. Vestibulum cursus urna vel nunc imperdiet
+                      suscipit. Ut eu augue egestas, porta orci lobortis,
+                      pharetra orci. Morbi eu tellus quis nisi tempor accumsan
+                      nec eu urna. empor, ullamcorper tortor. Mauris quis
+                      fermentum augue. Phasellus ac nisl hendrerit, fringilla
+                      enim aliquam, placerat odio. Ut tortor nisi, pellentesque
+                      sed nisi at, hendrerit imperdiet turpis. Proin interdum
+                      porttitor metus at hendrerit. Proin ipsum nisl, lacinia
+                      vitae purus ullamcorper, maximus convallis sem. Sed nec
+                      lacinia lorem. Duis arcu metus, cursus non odio quis,
+                      tincidunt tempor augue. Donec eget vestibulum risus.
+                      Nullam blandit quis est vitae feugiat.
+                    </div>
+                  </div>
+                  <div class="overlay"></div>
+                </div>
+                <br />
+              </div>
+
+              <div>
+                <button
+                  id="draw-diagram-button"
+                  type="button"
+                  style="font-size: 0.9rem; margin-top: 5px;"
+                  class="draw-button"
+                >
+                  Draw <small>(Beta)</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="customization-col">
+              <!-- Handwriting Font -->
+              <div style="padding: 5px 0px 5px 0px;">
+                <b>Customizations</b> <small>(Optional)</small>
+                <p style="font-size: 0.8rem;">
+                  <em
+                    >Note: Few changes may reflect only in the generated image
+                    and not in the preview</em
+                  >
+                </p>
+              </div>
+              <fieldset>
+                <legend>Handwriting Options</legend>
+
+                <div class="category-grid">
+                  <div>
+                    <label class="block" for="handwriting-font"
+                      >Handwriting Font</label
+                    >
+                    <select id="handwriting-font">
+                      <option
+                        selected
+                        style="font-family: 'Homemade Apple';"
+                        value="'Homemade Apple', cursive"
+                      >
+                        Homemade Apple
+                      </option>
+                      <option value="Hindi_Font">Kruti-dev(Hindi)</option>
+                      <option
+                        style="font-family: 'Caveat', cursive; font-size: 13pt;"
+                        value="'Caveat', cursive"
+                      >
+                        Caveat
+                      </option>
+                      <option
+                        style="
+                          font-family: 'Liu Jian Mao Cao';
+                          font-size: 13pt;
+                        "
+                        value="'Liu Jian Mao Cao', cursive"
+                      >
+                        Liu Jian Mao Cao
+                      </option>
+                    </select>
+                  </div>
+                  <div class="upload-handwriting-container">
+                    <label class="block" for="font-file"
+                      >Upload your handwriting font <small>(Beta)</small>&nbsp;
+                      <a
+                        style="font-size: 1.1rem;"
+                        title="How to add your own handwriting"
+                        href="#how-to-add-handwriting"
+                      >
+                        &#9432;
+                      </a>
+                    </label>
+                    <input accept=".ttf, .otf" type="file" id="font-file" />
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Pen ink color, Font size, Vertical position text, Word Spacing -->
+              <fieldset>
+                <legend>Page & Text Options</legend>
+
+                <div class="category-grid">
+                  <div>
+                    <label for="font-size">Font Size</label>
+                    <select id="font-size">
+                      <option value="8">8pt</option>
+                      <option value="9">9pt</option>
+                      <option value="10" selected>10pt</option>
+                      <option value="11">11pt</option>
+                      <option value="12">12pt</option>
+                      <option value="13">13pt</option>
+                      <option value="14">14pt</option>
+                      <option value="16">16pt</option>
+                      <option value="18">18pt</option>
+                      <option value="20">20pt</option>
+                      <option value="22">22pt</option>
+                      <option value="24">24pt</option>
+                      <option value="28">28pt</option>
+                      <option value="32">32pt</option>
+                      <option value="36">36pt</option>
+                      <option value="40">40pt</option>
+                      <option value="44">44pt</option>
+                      <option value="48">48pt</option>
+                      <option value="54">54pt</option>
+                      <option value="60">60pt</option>
+                      <option value="66">66pt</option>
+                      <option value="72">72pt</option>
+                      <option value="80">80pt</option>
+                      <option value="88">88pt</option>
+                      <option value="96">96pt</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="ink-color">Ink Color</label>
+                    <select id="ink-color">
+                      <option default value="#000f55">Blue</option>
+                      <option value="black">Black</option>
+                      <option value="#ba3807">Red</option>
+                      <option value="#2e7d32">Green</option>
+                      <option value="#7b1fa2">Purple</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="page-size">Page Size</label>
+                    <select id="page-size">
+                      <option default value="a4">A4</option>
+                      <option value="letter">Letter</option>
+                      <option value="legal">Legal</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="page-effects">Effects</label>
+                    <select id="page-effects">
+                      <option default value="shadows">Shadows</option>
+                      <option value="scanner">Scanner</option>
+                      <option value="no-effect">No Effect</option>
+                      <option value="vintage">Vintage</option>
+                      <option value="watermark">Watermark</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="resolution">Resolution</label>
+                    <select id="resolution">
+                      <option value="0.8">Very Low</option>
+                      <option value="1">Low</option>
+                      <option selected value="2">Normal</option>
+                      <option value="3">High</option>
+                      <option value="4">Very High</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="text-alignment">Text Alignment</label>
+                    <select id="text-alignment">
+                      <option value="left">Left</option>
+                      <option value="center">Center</option>
+                      <option value="right">Right</option>
+                      <option value="justify">Justify</option>
+                    </select>
+                  </div>
+                  <div class="postfix-input" data-postfix="px">
+                    <label for="line-height">Line Height</label>
+                    <input
+                      id="line-height"
+                      min="1"
+                      max="3"
+                      step="0.1"
+                      value="1.5"
+                      type="number"
+                    />
+                  </div>
+                  <div class="postfix-input" data-postfix="°">
+                    <label for="text-rotation">Text Rotation</label>
+                    <input
+                      id="text-rotation"
+                      min="-45"
+                      max="45"
+                      value="0"
+                      type="number"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Spacing Options</legend>
+
+                <div class="category-grid">
+                  <div class="postfix-input" data-postfix="px">
+                    <label for="top-padding">Vertical Position</label>
+                    <input id="top-padding" min="0" value="5" type="number" />
+                  </div>
+                  <div class="postfix-input" data-postfix="px">
+                    <label for="word-spacing">Word Spacing</label>
+                    <input
+                      id="word-spacing"
+                      min="0"
+                      max="100"
+                      value="0"
+                      type="number"
+                    />
+                  </div>
+                  <div class="postfix-input" data-postfix="pt">
+                    <label for="letter-spacing">Letter Spacing</label>
+                    <input
+                      id="letter-spacing"
+                      min="-5"
+                      max="40"
+                      value="0"
+                      type="number"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Letter spacing, Paper Margin, Paper Lines, Paper Curvature -->
+              <fieldset>
+                <legend>Margin & Line Options</legend>
+
+                <div class="category-grid">
+                  <div>
+                    <label for="paper-margin-toggle"
+                      >Paper Margin:
+                      <span aria-label="paper margin status" class="status"
+                        >on</span
+                      >
+                    </label>
+                    <label class="switch-toggle outer">
+                      <input
+                        aria-checked="true"
+                        checked
+                        aria-label="Paper Margin Button"
+                        id="paper-margin-toggle"
+                        type="checkbox"
+                      />
+                      <div></div>
+                    </label>
+                  </div>
+
+                  <div>
+                    <label for="paper-line-toggle"
+                      >Paper Lines:
+                      <span aria-label="paper line status" class="status"
+                        >on</span
+                      >
+                    </label>
+                    <label class="switch-toggle outer">
+                      <input
+                        aria-checked="true"
+                        checked
+                        aria-label="Paper Line Button"
+                        id="paper-line-toggle"
+                        type="checkbox"
+                      />
+                      <div></div>
+                    </label>
+                  </div>
+                  <div class="experimental">
+                    <!-- Removed option -->
+                    <div class="upload-paper-container">
+                      <label class="block" for="paper-file"
+                        >Upload Paper Image as Background</label
+                      >
+                      <input
+                        accept=".jpg, .jpeg, .png"
+                        type="file"
+                        id="paper-file"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Page Management Options -->
+              <fieldset>
+                <legend>Page Management</legend>
+                <div class="category-grid">
+                  <div>
+                    <label class="block" for="page-count">Number of Pages</label>
+                    <select id="page-count">
+                      <option value="1">Single Page</option>
+                      <option value="2">2 Pages</option>
+                      <option value="3">3 Pages</option>
+                      <option value="4">4 Pages</option>
+                      <option value="5">5 Pages</option>
+                      <option value="10">10 Pages</option>
+                      <option value="20">20 Pages</option>
+                      <option value="50">50 Pages</option>
+                      <option value="100">100 Pages</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="page-break">Page Break Style</label>
+                    <select id="page-break">
+                      <option value="auto">Automatic</option>
+                      <option value="manual">Manual (Use --- for breaks)</option>
+                      <option value="paragraph">By Paragraph</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="page-numbering">Page Numbering</label>
+                    <select id="page-numbering">
+                      <option value="none">No Numbers</option>
+                      <option value="top">Top of Page</option>
+                      <option value="bottom">Bottom of Page</option>
+                      <option value="both">Top and Bottom</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="page-number-style">Number Style</label>
+                    <select id="page-number-style">
+                      <option value="1">1, 2, 3...</option>
+                      <option value="i">i, ii, iii...</option>
+                      <option value="a">a, b, c...</option>
+                      <option value="roman">I, II, III...</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="page-preview-info" style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                  <p>💡 Tip: For manual page breaks, use three dashes (---) in your text where you want a new page to start.</p>
+                </div>
+              </fieldset>
+
+              <!-- GENERATE IMAGE BUTTONS -->
+              <hr
+                style="
+                  border: 0.3px solid var(--elevation-background);
+                  width: 80%;
+                "
+              />
+              <div style="text-align: center; padding: 30px 0px;">
+                <button
+                  type="submit"
+                  data-testid="generate-image-button"
+                  class="button generate-image-button"
+                >
+                  Generate Image
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- OUTPUT -->
+      <section>
+        <h2 id="output-header">Output</h2>
+        <div id="output" class="output" style="text-align: center;">
+          Click "Generate Image" Button to generate new image.
+        </div>
+        <div style="text-align: center; padding: 30px;">
+          <button class="imp-button" id="download-as-pdf-button">
+            Download All Images as PDF
+          </button>
+          <button class="delete-button" id="delete-all-button">
+            Clear all images
+          </button>
+        </div>
+      </section>
+
+      <section id="how-to-add-handwriting">
+        <h2>📝 Guide to Add Your Own Handwriting</h2>
+        <div class="guide-container">
+          <div class="guide-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Generate Your Handwriting Font</h3>
+              <p>Create a digital version of your handwriting using specialized tools.</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Use Online Tools</h3>
+              <p>Visit <a href="https://www.calligraphr.com/en/" target="_blank" rel="noopener noreferrer">Calligraphr</a> to create your handwriting font. It's free and easy to use!</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Upload Your Font</h3>
+              <p>Once you have your .ttf file, upload it using the 'Upload your handwriting font' button in the customizations section.</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Start Using</h3>
+              <p>Select your custom font from the dropdown menu and start creating beautiful handwritten text!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How can I add my own handwriting?</h3>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Follow our step-by-step guide above to create and upload your custom handwriting font. We recommend using Calligraphr for the best results.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What font formats are supported?</h3>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>We support .ttf and .otf font formats. These are the most common formats for custom fonts.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do I adjust text spacing?</h3>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Use the 'Word Spacing' and 'Letter Spacing' options in the customization panel to adjust the spacing between words and letters.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I save my generated text?</h3>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! You can download your generated text as an image or save multiple pages as a PDF using the download buttons.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Text to Handwriting</h3>
+          <p>Transform your digital text into beautiful handwritten-style text with just a few clicks!</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#how-to-add-handwriting">How to Add Handwriting</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://github.com/saurabhdaware/text-to-handwriting" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/vishang-lad-946718266" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+            <a href="https://github.com/vishangl" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="images/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            <a href="https://www.vishanglad.com" target="_blank" rel="noopener noreferrer" class="social-link">
+              <img src="images/website.svg" alt="Website" width="24" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Made with ❤️ by <a href="https://www.vishanglad.com" target="_blank" rel="noopener noreferrer">Vishang Lad</a></p>
+        <p class="disclaimer">Note: Use this tool responsibly and at your own risk.</p>
+      </div>
+    </footer>
+
+    <!-- Fixed Elements -->
+    <section class="draw-container popup-container">
+      <button class="close-button">&times;</button>
+      <div class="display-flex responsive-flex">
+        <canvas
+          id="diagram-canvas"
+          style="background-color: #fff;"
+          height="300px"
+          width="600px"
+        ></canvas>
+        <div class="flex-1 buttons-container padding-around">
+          <button
+            id="add-to-paper-button"
+            style="margin-top: 5px; margin-bottom: 5px;"
+          >
+            Add to Paper
+          </button>
+          <button
+            id="draw-download-button"
+            style="margin-top: 5px; margin-bottom: 5px;"
+          >
+            Download Image
+          </button>
+          <br /><br />
+          <input
+            type="file"
+            id="image-to-add-in-canvas"
+            accept="image/x-png,image/jpeg"
+            hidden="hidden"
+          />
+          <br /><br /><button id="add-new-image-button">Add bg image</button>
+          <br /><br />
+          <button
+            id="clear-draw-canvas"
+            class="blue-button"
+            style="background-color: #f30; color: #fff;"
+          >
+            Clear Canvas
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="./js/vendors/html2canvas.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/app.mjs"></script>
+    <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
+    <script>
+      function toggleTheme(toggleButton) {
+        if (document.body.classList.contains('dark')) {
+          document.body.classList.add('fade-in-light');
+          document.body.classList.remove('dark');
+          document.body.classList.remove('fade-in-dark');
+          window.localStorage.setItem('prefers-theme', 'light');
+          if (toggleButton) {
+            toggleButton.setAttribute('aria-pressed', false);
+            toggleButton.setAttribute('aria-label', 'Activate Dark Mode');
+          }
+        } else {
+          document.body.classList.add('fade-in-dark');
+          document.body.classList.add('dark');
+          document.body.classList.remove('fade-in-light');
+          window.localStorage.setItem('prefers-theme', 'dark');
+          if (toggleButton) {
+            toggleButton.setAttribute('aria-pressed', true);
+            toggleButton.setAttribute('aria-label', 'Activate Light Mode');
+          }
+        }
+      }
+
+      const localPreference = window.localStorage.getItem('prefers-theme');
+      if (localPreference) {
+        if (localPreference === 'light') document.body.classList.remove('dark');
+        else document.body.classList.add('dark');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+      }
+
+      document.querySelectorAll('#donations a[href]').forEach((anchorEl) => {
+        anchorEl.addEventListener('click', (e) => {
+          const tracker = ga.getAll()[0];
+          let label;
+          if (e.target.href) {
+            label = e.target.href;
+          } else {
+            label = e.target.parentElement.href;
+          }
+
+          if (tracker) {
+            tracker.send('event', 'Donation Link', 'Click', label);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

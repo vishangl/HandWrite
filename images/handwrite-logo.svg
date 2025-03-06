@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#09f;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#00bcd4;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="30" cy="30" r="28" fill="url(#bgGradient)"/>
+  
+  <!-- Stylized H letter formed by a pen/pencil -->
+  <path d="M20 15L20 45M20 30H35M35 15L35 45" 
+        stroke="#09f" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Decorative writing flourish -->
+  <path d="M15 35C25 25 35 35 45 25" 
+        stroke="#09f" 
+        stroke-width="2" 
+        stroke-linecap="round"
+        opacity="0.7"/>
+  
+  <!-- Ink dots/splashes -->
+  <circle cx="20" cy="30" r="2" fill="#09f" opacity="0.8"/>
+  <circle cx="35" cy="30" r="2" fill="#09f" opacity="0.8"/>
+  
+  <!-- Small decorative elements -->
+  <circle cx="42" cy="22" r="1" fill="#09f" opacity="0.5"/>
+  <circle cx="18" cy="38" r="1" fill="#09f" opacity="0.5"/>
+</svg> 
