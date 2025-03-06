@@ -90,7 +90,7 @@
     <!-- Load Fonts -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto|Caveat|Liu+Jian+Mao+Cao&display=swap"
+      href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto|Caveat|Liu+Jian+Mao+Cao|Dancing+Script|Pacifico|Sacramento|Indie+Flower|Kalam|Noto+Sans+JP|Noto+Sans+KR|Noto+Sans+SC&display=swap"
     />
 
     <!-- CSS -->
@@ -166,6 +166,28 @@
                 <br />
               </div>
 
+              <!-- PDF Upload Section -->
+              <div class="pdf-upload-section">
+                <h3>Convert PDF to Handwriting</h3>
+                <div class="pdf-upload-container">
+                  <input type="file" id="pdf-file" accept=".pdf" class="pdf-input" />
+                  <label for="pdf-file" class="pdf-label">
+                    <img src="images/pdf-icon.svg" alt="PDF Icon" width="30" height="30">
+                    <span>Choose PDF or Drag & Drop</span>
+                  </label>
+                  <div id="pdf-preview"></div>
+                  <button id="convert-pdf-button" class="button" style="display: none;">
+                    Convert to Handwriting
+                  </button>
+                </div>
+                <div class="pdf-status" style="display: none;">
+                  <div class="progress-bar">
+                    <div class="progress"></div>
+                  </div>
+                  <p class="status-text">Converting page <span id="current-page">0</span> of <span id="total-pages">0</span></p>
+                </div>
+              </div>
+
               <div>
                 <button
                   id="draw-diagram-button"
@@ -213,6 +235,36 @@
                         Caveat
                       </option>
                       <option
+                        style="font-family: 'Dancing Script', cursive; font-size: 13pt;"
+                        value="'Dancing Script', cursive"
+                      >
+                        Dancing Script
+                      </option>
+                      <option
+                        style="font-family: 'Pacifico', cursive; font-size: 13pt;"
+                        value="'Pacifico', cursive"
+                      >
+                        Pacifico
+                      </option>
+                      <option
+                        style="font-family: 'Sacramento', cursive; font-size: 13pt;"
+                        value="'Sacramento', cursive"
+                      >
+                        Sacramento
+                      </option>
+                      <option
+                        style="font-family: 'Indie Flower', cursive; font-size: 13pt;"
+                        value="'Indie Flower', cursive"
+                      >
+                        Indie Flower
+                      </option>
+                      <option
+                        style="font-family: 'Kalam', cursive; font-size: 13pt;"
+                        value="'Kalam', cursive"
+                      >
+                        Kalam
+                      </option>
+                      <option
                         style="
                           font-family: 'Liu Jian Mao Cao';
                           font-size: 13pt;
@@ -235,6 +287,23 @@
                       </a>
                     </label>
                     <input accept=".ttf, .otf" type="file" id="font-file" />
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Language Selection -->
+              <fieldset>
+                <legend>Language Options</legend>
+                <div class="category-grid">
+                  <div>
+                    <label class="block" for="language-select">Select Language</label>
+                    <select id="language-select" onchange="changeLanguage(this.value)">
+                      <option value="en">English</option>
+                      <option value="hi">Hindi</option>
+                      <option value="ja">Japanese</option>
+                      <option value="ko">Korean</option>
+                      <option value="zh">Chinese (Simplified)</option>
+                    </select>
                   </div>
                 </div>
               </fieldset>
