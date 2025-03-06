@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a73e8"/>
+      <stop offset="100%" style="stop-color:#006eb8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Paper background -->
+  <rect x="10" y="10" width="40" height="40" rx="4" fill="url(#logoGradient)" fill-opacity="0.1"/>
+  
+  <!-- Text lines -->
+  <line x1="15" y1="25" x2="45" y2="25" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="15" y1="35" x2="45" y2="35" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Handwriting effect -->
+  <path d="M20 20C20 20 25 15 30 20C35 25 40 20 40 20" 
+        stroke="url(#logoGradient)" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        fill="none"/>
+  
+  <!-- Pen -->
+  <path d="M45 15L50 10L55 15L50 20L45 15Z" 
+        fill="url(#logoGradient)" 
+        stroke="url(#logoGradient)" 
+        stroke-width="1"/>
+  
+  <!-- Ink dot -->
+  <circle cx="50" cy="15" r="2" fill="url(#logoGradient)"/>
+</svg> 

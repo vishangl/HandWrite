@@ -10,14 +10,28 @@ import {
 } from './generate-images.mjs';
 import { setInkColor, toggleDrawCanvas } from './utils/draw.mjs';
 
-// Import PDF.js library
-import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.mjs';
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.mjs';
+/**
+ *
+ * Hi there! This is the entry file of the tool and deals with adding event listeners
+ * and some other functions.
+ *
+ * To contribute, you can follow the imports above and make changes in the file
+ * related to the issue you've choosen.
+ *
+ * If you have any questions related to code, you can drop them in my Twitter DM @saurabhcodes
+ * or in my email at saurabhdaware99@gmail.com
+ *
+ * Thanks! and Happy coding 🌻
+ *
+ */
 
 const pageEl = document.querySelector('.page-a');
 
 const setTextareaStyle = (attrib, v) => (pageEl.style[attrib] = v);
 
+/**
+ * Add event listeners here, they will be automatically mapped with addEventListener later
+ */
 const EVENT_MAP = {
   '#generate-image-form': {
     on: 'submit',
@@ -133,85 +147,6 @@ const EVENT_MAP = {
   '#paper-file': {
     on: 'change',
     action: (e) => addPaperFromFile(e.target.files[0])
-  },
-  '#pdf-file': {
-    on: 'change',
-    action: async (e) => {
-      const file = e.target.files[0];
-      if (file && file.type === 'application/pdf') {
-        try {
-          // Load the PDF
-          const arrayBuffer = await file.arrayBuffer();
-          currentPdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-          
-          // Show total pages
-          totalPagesSpan.textContent = currentPdf.numPages;
-          
-          // Show preview of first page
-          const page = await currentPdf.getPage(1);
-          const viewport = page.getViewport({ scale: 0.5 });
-          
-          const canvas = document.createElement('canvas');
-          const context = canvas.getContext('2d');
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
-          
-          await page.render({
-            canvasContext: context,
-            viewport: viewport
-          }).promise;
-          
-          // Clear previous preview
-          pdfPreview.innerHTML = '';
-          pdfPreview.appendChild(canvas);
-          
-          // Show convert button
-          convertPdfButton.style.display = 'inline-block';
-        } catch (error) {
-          console.error('Error loading PDF:', error);
-          alert('Error loading PDF. Please try again.');
-        }
-      }
-    }
-  },
-  '#convert-pdf-button': {
-    on: 'click',
-    action: async () => {
-      if (!currentPdf) return;
-      
-      try {
-        pdfStatus.style.display = 'block';
-        const totalPages = currentPdf.numPages;
-        let extractedText = '';
-        
-        for (let i = 1; i <= totalPages; i++) {
-          currentPageSpan.textContent = i;
-          progressBar.style.width = `${(i / totalPages) * 100}%`;
-          
-          const page = await currentPdf.getPage(i);
-          const textContent = await page.getTextContent();
-          const pageText = textContent.items.map(item => item.str).join(' ');
-          extractedText += pageText + '\n\n';
-        }
-        
-        // Set the extracted text in the handwriting input
-        const noteInput = document.getElementById('note');
-        noteInput.innerHTML = extractedText;
-        
-        // Hide status and reset
-        pdfStatus.style.display = 'none';
-        progressBar.style.width = '0%';
-        currentPageSpan.textContent = '0';
-        
-        // Scroll to the handwriting preview
-        noteInput.scrollIntoView({ behavior: 'smooth' });
-        
-      } catch (error) {
-        console.error('Error converting PDF:', error);
-        alert('Error converting PDF. Please try again.');
-        pdfStatus.style.display = 'none';
-      }
-    }
   }
 };
 
@@ -270,32 +205,3 @@ fetch(
       )
       .join('');
   });
-
-// FAQ Accordion functionality
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
-    const faqItem = question.parentElement;
-    const isActive = faqItem.classList.contains('active');
-    
-    // Close all FAQ items
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.classList.remove('active');
-    });
-    
-    // Toggle the clicked item
-    if (!isActive) {
-      faqItem.classList.add('active');
-    }
-  });
-});
-
-// PDF handling functionality
-const pdfFile = document.getElementById('pdf-file');
-const pdfPreview = document.getElementById('pdf-preview');
-const convertPdfButton = document.getElementById('convert-pdf-button');
-const pdfStatus = document.querySelector('.pdf-status');
-const progressBar = document.querySelector('.progress');
-const currentPageSpan = document.getElementById('current-page');
-const totalPagesSpan = document.getElementById('total-pages');
-
-let currentPdf = null;
