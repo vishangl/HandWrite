@@ -1068,6 +1068,10 @@ input[type='range']::-webkit-slider-thumb:hover {
   line-height: 1.6;
 }
 
+.guide-tips ul button{
+  font-size: 1.2rem;
+}
+
 .guide-tips li:before {
   content: '💡';
   position: absolute;
