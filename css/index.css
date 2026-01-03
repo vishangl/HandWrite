@@ -38,6 +38,14 @@ body.dark {
   font-family: 'Hindi_Font';
   src: url(../fonts/Hindi_Type.ttf);
 }
+@font-face {
+  font-family: 'Riya_Font';
+  src: url(../fonts/riya.ttf);
+}
+@font-face {
+  font-family: 'Vishu_Font';
+  src: url(../fonts/vishu.ttf);
+}
 
 /* Default CSS Changes */
 * {
