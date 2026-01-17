@@ -4,27 +4,52 @@
   position: absolute;
   top: 100px;
   right: 150px;
-  border: none;
-  background: transparent;
+  border: 2px solid var(--field-borders);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
 }
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
 body:not(.user-is-tabbing) .dark-mode-toggle:focus {
   outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
 }
+
 .dark-mode-toggle .moon {
   padding: 10px;
+  transition: transform var(--transition-normal);
 }
+
 .dark-mode-toggle .sun {
   padding: 5px;
+  transition: transform var(--transition-normal);
 }
+
 body .dark-mode-toggle .moon {
   display: none;
 }
+
 body .dark-mode-toggle .sun {
   display: inline-block;
 }
+
 body.dark .dark-mode-toggle .moon {
   display: inline-block;
 }
+
 body.dark .dark-mode-toggle .sun {
   display: none;
 }
@@ -55,11 +80,11 @@ body.dark .dark-mode-toggle .sun {
   transition: 0.1s ease;
 }
 
-.switch-toggle input:focus + div {
+.switch-toggle input:focus+div {
   outline: 1;
 }
 
-.switch-toggle input:checked + div {
+.switch-toggle input:checked+div {
   left: 28px;
   background-color: #999f;
 }
