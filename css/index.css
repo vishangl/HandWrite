@@ -10,7 +10,7 @@ body {
   --elevation-background: #f7fafc;
   --link-color: #667eea;
   --font-family-primary: 'Roboto', Arial;
-  --handwriting-font: 'Homemade Apple', cursive;
+  --handwriting-font: 'Vishu1_Font', 'Homemade Apple', cursive;
   --primary-color: #667eea;
   --secondary-color: #764ba2;
   --accent-color: #00d4ff;
@@ -81,6 +81,11 @@ body.dark {
 @font-face {
   font-family: 'Vishu_Font';
   src: url(../fonts/vishu.ttf);
+}
+
+@font-face {
+  font-family: 'Vishu1_Font';
+  src: url(../fonts/Vishu1-Regular.ttf);
 }
 
 /* Default CSS Changes */
