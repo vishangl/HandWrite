@@ -17,7 +17,12 @@ body {
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-bg-light: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  --gradient-bg-light: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 50%,
+    #f093fb 100%
+  );
   --ink-color: #000f55;
   --label-color: #4a5568;
   --field-borders: #e2e8f0;
@@ -55,7 +60,12 @@ body.dark {
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --gradient-bg-light: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+  --gradient-bg-light: linear-gradient(
+    135deg,
+    #1a202c 0%,
+    #2d3748 50%,
+    #4a5568 100%
+  );
 }
 
 @font-face {
@@ -101,10 +111,21 @@ body::after {
   width: 200%;
   height: 200%;
   z-index: -1;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(102, 126, 234, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(118, 75, 162, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 20%,
+      rgba(0, 212, 255, 0.1) 0%,
+      transparent 50%
+    );
   animation: float 20s ease-in-out infinite;
 }
 
@@ -114,7 +135,8 @@ body {
   padding: 100px 100px;
   font-size: 1.05rem;
   font-family: var(--font-family-primary);
-  transition: background-color var(--transition-normal), color var(--transition-normal);
+  transition: background-color var(--transition-normal),
+    color var(--transition-normal);
 }
 
 a {
@@ -249,7 +271,7 @@ ul.info-ul {
   padding-left: 20px;
 }
 
-ul.info-ul>li {
+ul.info-ul > li {
   padding: 5px 5px;
 }
 
@@ -261,11 +283,11 @@ ul.info-ul>li {
   display: flex;
 }
 
-.display-flex.padded-flex>div {
+.display-flex.padded-flex > div {
   padding: 0px 10px;
 }
 
-.display-flex.padded-flex>div:first-child {
+.display-flex.padded-flex > div:first-child {
   padding-left: unset;
 }
 
@@ -837,7 +859,7 @@ body.dark footer {
 }
 
 /* Page Orientation Styles */
-#page-orientation:checked+.page-a {
+#page-orientation:checked + .page-a {
   transform: rotate(90deg);
   transform-origin: top left;
 }
@@ -932,10 +954,12 @@ body.dark footer {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg,
-      transparent,
-      var(--primary-color),
-      transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
   opacity: 0.5;
 }
 
@@ -957,10 +981,12 @@ body.dark .logo {
 }
 
 body.dark .logo::after {
-  background: linear-gradient(90deg,
-      transparent,
-      var(--link-color),
-      transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--link-color),
+    transparent
+  );
 }
 
 body.dark .logo-subtitle {
@@ -1174,9 +1200,11 @@ input[type='range']::-webkit-slider-thumb:hover {
 
 /* Guide Section Styles */
 .guide-section {
-  background: linear-gradient(135deg,
-      var(--elevation-background) 0%,
-      var(--background-primary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--elevation-background) 0%,
+    var(--background-primary) 100%
+  );
   border-radius: 16px;
   padding: 40px;
   margin: 40px 0;
@@ -1277,9 +1305,11 @@ input[type='range']::-webkit-slider-thumb:hover {
 
 /* FAQ Section Styles */
 .faq-section {
-  background: linear-gradient(135deg,
-      var(--background-primary) 0%,
-      var(--elevation-background) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--background-primary) 0%,
+    var(--elevation-background) 100%
+  );
   border-radius: 16px;
   padding: 40px;
   margin: 40px 0;

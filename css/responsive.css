@@ -1,0 +1,570 @@
+/* ========================================
+   RESPONSIVE CSS FOR HANDWRITE APPLICATION
+   ======================================== */
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    padding: 100px 150px;
+  }
+}
+
+/* Large Devices (desktops, 992px to 1199px) */
+@media (max-width: 1199px) {
+  body {
+    padding: 80px 60px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .logo {
+    font-size: 3.4rem;
+  }
+}
+
+/* Medium Devices (tablets, 768px to 991px) */
+@media (max-width: 991px) {
+  body {
+    padding: 60px 40px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .dark-mode-toggle {
+    top: 60px;
+    right: 60px;
+  }
+
+  .customization-col {
+    padding: 0px 30px !important;
+  }
+
+  .page-a {
+    width: 350px;
+    height: calc(11.7 * 350px / 8.3);
+  }
+
+  .output {
+    padding: 30px;
+  }
+
+  .guide-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  fieldset {
+    padding: 18px 20px;
+  }
+}
+
+/* Small Devices (landscape phones, 576px to 767px) */
+@media (max-width: 767px) {
+  body {
+    padding: 80px 20px 40px;
+    font-size: 1rem;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: 2.2rem;
+  }
+
+  .logo-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .dark-mode-toggle {
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+  }
+
+  .dark-mode-toggle .moon,
+  .dark-mode-toggle .sun {
+    padding: 5px;
+  }
+
+  .padding-around {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .display-flex.responsive-flex {
+    flex-direction: column;
+  }
+
+  .display-flex.padded-flex > div {
+    padding: 0px 5px;
+  }
+
+  .customization-col {
+    padding: 40px 5px !important;
+  }
+
+  .page-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .page-container-super {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-a {
+    width: 320px;
+    height: calc(11.7 * 320px / 8.3);
+    font-size: 9pt;
+  }
+
+  .output {
+    padding: 20px;
+  }
+
+  .output img {
+    width: 250px;
+    margin: 0px 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .generate-image-button {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+
+  fieldset {
+    padding: 15px 18px;
+  }
+
+  legend {
+    font-size: 0.9rem;
+  }
+
+  select,
+  input {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .category-grid {
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    gap: 15px;
+  }
+
+  .checkbox-group {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project-contributors {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contributor-profile {
+    width: 7.5em;
+    height: 150px;
+    margin: 10px 3px;
+  }
+
+  .contributor-username {
+    font-size: 9pt;
+  }
+
+  #faq,
+  #how-to-add-handwriting {
+    padding: 20px;
+    margin: 30px 0;
+  }
+
+  #faq h2,
+  #how-to-add-handwriting h2 {
+    font-size: 1.5rem;
+  }
+
+  #faq h3 {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  footer .social-links {
+    gap: 15px;
+  }
+
+  .guide-section,
+  .faq-section {
+    padding: 25px 20px;
+  }
+
+  .guide-step {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .step-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .faq-question {
+    padding: 15px;
+  }
+
+  .faq-question h4 {
+    font-size: 1rem;
+  }
+
+  .popup-container {
+    padding: 60px 20px;
+  }
+}
+
+/* Extra Small Devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  body {
+    padding: 70px 15px 30px;
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .logo-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .dark-mode-toggle {
+    top: 15px;
+    right: 15px;
+    padding: 8px;
+  }
+
+  .page-a {
+    width: 280px;
+    height: calc(11.7 * 280px / 8.3);
+    font-size: 8pt;
+  }
+
+  .output {
+    padding: 15px;
+  }
+
+  .output img {
+    width: 200px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .generate-image-button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  fieldset {
+    padding: 12px 15px;
+    margin-top: 15px;
+  }
+
+  legend {
+    font-size: 0.85rem;
+    padding: 0px 8px;
+  }
+
+  select,
+  input {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .contributor-profile {
+    width: 6.5em;
+    height: 130px;
+  }
+
+  .guide-section,
+  .faq-section {
+    padding: 20px 15px;
+  }
+
+  .guide-step {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .step-content h3 {
+    font-size: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 25px 15px;
+  }
+
+  footer .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+
+  footer .social-links img {
+    width: 18px;
+    height: 18px;
+  }
+
+  footer .footer-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Very Small Devices (small portrait phones, less than 430px) */
+@media (max-width: 429px) {
+  body {
+    padding: 60px 10px 25px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .page-a {
+    width: 260px;
+    height: calc(11.7 * 260px / 8.3);
+  }
+
+  .delete-button {
+    margin-top: 10px;
+  }
+
+  .output .close-button {
+    font-size: 12pt;
+    padding: 3px 8px;
+  }
+
+  .download-image-button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  #faq h2,
+  #how-to-add-handwriting h2 {
+    font-size: 1.3rem;
+  }
+
+  .guide-tips h3,
+  .faq-category h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-width: 991px) and (orientation: landscape) {
+  body {
+    padding: 40px 30px;
+  }
+
+  .dark-mode-toggle {
+    top: 20px;
+    right: 40px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .page-a {
+    width: 300px;
+    height: calc(11.7 * 300px / 8.3);
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .dark-mode-toggle {
+    padding: 14px;
+  }
+
+  select,
+  input[type='text'],
+  input[type='number'],
+  input[type='color'] {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .switch-toggle {
+    width: 60px;
+    height: 30px;
+  }
+
+  .switch-toggle.outer div {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    padding: 0;
+    background: white !important;
+  }
+
+  body::before,
+  body::after {
+    display: none;
+  }
+
+  .dark-mode-toggle,
+  .generate-image-button,
+  .imp-button,
+  .delete-button,
+  button,
+  footer,
+  #faq,
+  #how-to-add-handwriting {
+    display: none !important;
+  }
+
+  .output {
+    border: none;
+    box-shadow: none;
+  }
+
+  .page-a {
+    box-shadow: none;
+    page-break-after: always;
+  }
+}
+
+/* High Resolution Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .page-a {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
+  .logo-icon {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  body::before,
+  body::after {
+    animation: none !important;
+  }
+
+  button::before {
+    transition: none !important;
+  }
+}
+
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode) {
+    --background-primary: #0f1419;
+    --font-color-primary: #e2e8f0;
+    --elevation-background: #1a202c;
+  }
+}
+
+/* Container Query Support (Modern Browsers) */
+@supports (container-type: inline-size) {
+  .output {
+    container-type: inline-size;
+  }
+
+  @container (max-width: 500px) {
+    .output img {
+      width: 150px;
+    }
+  }
+}
