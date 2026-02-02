@@ -80,11 +80,11 @@ body.dark .dark-mode-toggle .sun {
   transition: 0.1s ease;
 }
 
-.switch-toggle input:focus + div {
+.switch-toggle input:focus+div {
   outline: 1;
 }
 
-.switch-toggle input:checked + div {
+.switch-toggle input:checked+div {
   left: 28px;
   background-color: #999f;
 }
@@ -170,4 +170,81 @@ img.contributor-avatar {
 
 .contributor-username {
   margin-top: 7px;
+}
+
+/* Guide Section Responsive Styles */
+.guide-container-detailed {
+  width: 100%;
+  max-width: 100%;
+}
+
+.guide-step-detailed {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.step-content-detailed {
+  width: 100%;
+}
+
+.step-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.step-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.guide-tips-enhanced {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.template-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.template-btn {
+  flex: 1 1 auto;
+  min-width: 150px;
+  max-width: 100%;
+}
+
+/* Responsive adjustments for guide section */
+@media (max-width: 768px) {
+  .step-image img {
+    border-radius: 6px;
+  }
+
+  .template-btn {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .guide-tips-enhanced {
+    padding: 0.75rem;
+  }
+
+  .template-buttons {
+    flex-direction: column;
+  }
+
+  .template-btn {
+    width: 100%;
+    max-width: 100%;
+  }
 }

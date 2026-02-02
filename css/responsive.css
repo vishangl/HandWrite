@@ -5,14 +5,14 @@
 /* Extra Large Devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   body {
-    padding: 100px 150px;
+    padding: 6rem 8rem;
   }
 }
 
 /* Large Devices (desktops, 992px to 1199px) */
 @media (max-width: 1199px) {
   body {
-    padding: 80px 60px;
+    padding: 5rem 4rem;
   }
 
   h1 {
@@ -27,7 +27,7 @@
 /* Medium Devices (tablets, 768px to 991px) */
 @media (max-width: 991px) {
   body {
-    padding: 60px 40px;
+    padding: 4rem 2rem;
   }
 
   h1 {
@@ -44,7 +44,7 @@
   }
 
   .customization-col {
-    padding: 0px 30px !important;
+    padding: 0px 1rem !important;
   }
 
   .page-a {
@@ -69,7 +69,7 @@
 /* Small Devices (landscape phones, 576px to 767px) */
 @media (max-width: 767px) {
   body {
-    padding: 80px 20px 40px;
+    padding: 5rem 1rem 2.5rem;
     font-size: 1rem;
   }
 
@@ -117,12 +117,12 @@
     flex-direction: column;
   }
 
-  .display-flex.padded-flex > div {
+  .display-flex.padded-flex>div {
     padding: 0px 5px;
   }
 
   .customization-col {
-    padding: 40px 5px !important;
+    padding: 2rem 0.5rem !important;
   }
 
   .page-container {
@@ -143,11 +143,13 @@
   }
 
   .output {
-    padding: 20px;
+    padding: 1.25rem 0.5rem;
   }
 
   .output img {
-    width: 250px;
+    max-width: 90vw;
+    width: auto;
+    height: auto;
     margin: 0px 5px;
   }
 
@@ -268,7 +270,7 @@
 /* Extra Small Devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
   body {
-    padding: 70px 15px 30px;
+    padding: 4.5rem 0.75rem 2rem;
     font-size: 0.95rem;
   }
 
@@ -302,11 +304,13 @@
   }
 
   .output {
-    padding: 15px;
+    padding: 1rem 0.5rem;
   }
 
   .output img {
-    width: 200px;
+    max-width: 85vw;
+    width: auto;
+    height: auto;
   }
 
   button {
@@ -386,7 +390,7 @@
 /* Very Small Devices (small portrait phones, less than 430px) */
 @media (max-width: 429px) {
   body {
-    padding: 60px 10px 25px;
+    padding: 4rem 0.5rem 1.5rem;
   }
 
   h1 {
@@ -469,7 +473,8 @@
   input[type='number'],
   input[type='color'] {
     min-height: 44px;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
+    /* Prevents zoom on iOS */
   }
 
   .switch-toggle {
@@ -518,7 +523,8 @@
 }
 
 /* High Resolution Displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .page-a {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
