@@ -117,7 +117,7 @@
     flex-direction: column;
   }
 
-  .display-flex.padded-flex>div {
+  .display-flex.padded-flex > div {
     padding: 0px 5px;
   }
 
@@ -523,8 +523,7 @@
 }
 
 /* High Resolution Displays */
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .page-a {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;

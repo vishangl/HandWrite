@@ -194,11 +194,11 @@ document.querySelectorAll('.switch-toggle input').forEach((toggleInput) => {
 //         (contributor) => /* html */ `
 //         <div class="contributor-profile shadow">
 //           <a href="${contributor.html_url}">
-//             <img 
-//               alt="GitHub avatar of contributor ${contributor.login}" 
-//               class="contributor-avatar" 
-//               loading="lazy" 
-//               src="${contributor.avatar_url}" 
+//             <img
+//               alt="GitHub avatar of contributor ${contributor.login}"
+//               class="contributor-avatar"
+//               loading="lazy"
+//               src="${contributor.avatar_url}"
 //             />
 //             <div class="contributor-username">${contributor.login}</div>
 //           </a>
